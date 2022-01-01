@@ -12,21 +12,26 @@ const Header = () => {
         <Toolbar sx={{ color: 'text.disabled' }}>
 
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Hero Rider
+            Hero Riders
           </Typography>
           <Link to="/home" style={{ textDecoration: 'none', color: 'white' }}><Button color="inherit">Home</Button></Link>
-          <Link to="/reviews" style={{ textDecoration: 'none', color: 'white' }}><Button color="inherit">Reviews</Button></Link>
-
-
+         
 
           <Box>
-            <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/products">
+            <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/about">
+              <Button color="inherit">About</Button>
+            </NavLink>
+
+          </Box>
+
+          <Box>
+            <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/services">
               <Button color="inherit">Services</Button>
             </NavLink>
 
           </Box>
 
-          {/* {
+          {
             user?.email ?
               <Box>
                 <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/dashboard">
@@ -38,7 +43,7 @@ const Header = () => {
               <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/login">
                 <Button color="inherit">Login </Button>
               </NavLink>
-          } */}
+          }
 
 
 

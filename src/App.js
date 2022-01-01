@@ -8,6 +8,13 @@ import {
 import Header from './Pages/Shared/Header/Header';
 import AuthProvider from './contexts/AuthProvider';
 import Home from './Pages/Home/Home/Home';
+import Services from './Pages/Home/Home/Services/Services';
+import NotFound from './Pages/Home/NotFound/NotFound';
+import Login from './Pages/Login/Login/Login';
+import Register from './Pages/Login/Register/Register';
+import ManageService from './Pages/Dashboard/ManageService/ManageService';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import About from './Pages/Home/Home/About/About';
 
 function App() {
   return (
@@ -35,15 +42,13 @@ function App() {
             <UpdateUser />
           </PrivateRoute> */}
 
-          {/* <PrivateRoute path="/pay">
-            <Pay />
-          </PrivateRoute> */}
-          {/* <Route path="/home">
+          
+          <Route path="/home">
             <Home />
-          </Route> */}
-          {/* <Route exact path="/products">
-            <Products />
-          </Route> */}
+          </Route>
+          <Route exact path="/services">
+            <Services/>
+          </Route>
           
           {/* <Route exact path="/reviews">
             <Reviews />
@@ -54,24 +59,27 @@ function App() {
           {/* <Route exact path="/reviewBox">
             <ReviewBox />
           </Route> */}
-          {/* <Route path="/login">
+          <Route path="/login">
             <Login />
-          </Route> */}
-          {/* <PrivateRoute path="/manageOrder/:productId">
-            <ManageOrder />
-          </PrivateRoute> */}
-          {/* <Route path="/register">
+          </Route>
+          <Route path="/about">
+            <About/>
+          </Route>
+          <PrivateRoute path="/manageService/:serviceId">
+            <ManageService />
+          </PrivateRoute>
+          <Route path="/register">
             <Register />
-          </Route> */}
+          </Route>
           <Route exact path="/">
             <Home />
           </Route>
 
 
 
-          {/* <Route path="*">
+          <Route path="*">
             <NotFound></NotFound>
-          </Route> */}
+          </Route>
         </Switch>
       </Router>
     </AuthProvider>
