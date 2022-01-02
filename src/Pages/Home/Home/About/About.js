@@ -3,6 +3,7 @@ import React from 'react';
 import about from '../../../../images/img1.jpg';
 import Flip from 'react-reveal/Flip';
 import Slide from 'react-reveal/Slide';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -55,13 +56,21 @@ Take your driving lessons with us. We accept all students. It is as easy as 1, 2
         <Slide right>
         <Grid container spacing={2}>
 <Grid item sx={{ mt: 5 }} xs={12} md={6}>
-<Button variant="contained" style={{ backgroundColor: 'primary' }}>Join As A Lerner</Button>
+
+  <Link to="/services">
+  <Button variant="contained" style={{ backgroundColor: 'primary' }}>Join As A Lerner</Button>
+  </Link>
+
 
 
 
 </Grid>
 <Grid item sx={{ mt: 5 }} xs={12} md={6}>
-<Button variant="contained" style={{ backgroundColor: 'primary' }}>Join As A Rider</Button>
+
+  <Link to="/register/services">
+  <Button variant="contained" style={{ backgroundColor: 'primary' }}>Join As A Rider</Button>
+  </Link>
+
 </Grid>
 </Grid>
         </Slide>

@@ -15,6 +15,8 @@ import Register from './Pages/Login/Register/Register';
 import ManageService from './Pages/Dashboard/ManageService/ManageService';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import About from './Pages/Home/Home/About/About';
+import BookingModal from './Pages/Dashboard/BookingModal/BookingModal';
+import { Dashboard } from '@mui/icons-material';
 
 function App() {
   return (
@@ -25,9 +27,9 @@ function App() {
         <Switch>
 
 
-          {/* <PrivateRoute path="/dashboard">
+          <PrivateRoute path="/dashboard">
             <Dashboard />
-          </PrivateRoute> */}
+          </PrivateRoute>
           {/* <PrivateRoute path="/orders">
             <Orders />
           </PrivateRoute> */}
@@ -62,8 +64,9 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/about">
-            <About/>
+         
+          <Route path="/bookingModal">
+            <BookingModal/>
           </Route>
           <PrivateRoute path="/manageService/:serviceId">
             <ManageService />
