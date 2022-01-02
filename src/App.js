@@ -68,6 +68,9 @@ function App() {
           <Route path="/bookingModal">
             <BookingModal/>
           </Route>
+          <Route path="/about">
+            <About/>
+          </Route>
           <PrivateRoute path="/manageService/:serviceId">
             <ManageService />
           </PrivateRoute>
