@@ -12,7 +12,7 @@ const MakeAdmin = () => {
   }
   const handleAdminSubmit = e => {
     const user = { email };
-    fetch('https://peaceful-beach-69061.herokuapp.com/users/admin', {
+    fetch('http://localhost:5000/users', {
       method: 'PUT',
       headers: {
         'content-type': 'application/json'
