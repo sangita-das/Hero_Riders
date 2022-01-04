@@ -22,14 +22,17 @@ import {
   useRouteMatch
 } from "react-router-dom";
 import { Button } from '@mui/material';
-import MakeAdmin from '../MakeAdmin/MakeAdmin';
-// import AdminRoute from '../../Login/AdminRoute/AdminRoute';
-// import MyOrders from '../MyOrders/MyOrders';
+
 import useAuth from '../../../hooks/useAuth';
-import ManageOrder from '../ManageOrder/ManageOrder';
 
 
 const drawerWidth = 200;
+const bgColor = {
+  backgroundColor: '#aed581',
+  backgroundBlendMode: 'hard-light',
+
+}
+
 
 function Dashboard(props) {
   const { window } = props;
@@ -45,7 +48,7 @@ function Dashboard(props) {
   };
 
   const drawer = (
-    <div>
+    <div style={bgColor}>
       <Toolbar />
       <Divider />
 
@@ -55,17 +58,13 @@ function Dashboard(props) {
       <Button onClick={logout} color="inherit" variant="contained">Logout</Button>
       <br />
       <br />
-      <Link to="/products" style={{ textDecoration: 'none' }}><Button color="inherit">Products</Button></Link>
+      <Link to="/services" style={{ textDecoration: 'none' }}><Button color="inherit">Services</Button></Link>
       <br />
       <Link to="/pay" style={{ textDecoration: 'none' }}><Button color="inherit">Pay</Button></Link>
       <br />
-      {/* <Link to="/reviewBox" style={{ textDecoration: 'none' }}><Button color="inherit">Customer Review Section</Button></Link>
-      <br />
 
-      <Link to="/myOrders" style={{ textDecoration: 'none' }}><Button color="inherit">My Orders</Button></Link>
-      <br />
-
-      <Link to="/orders" style={{ textDecoration: 'none' }}><Button color="inherit">All User Orders</Button></Link> */}
+      <Link to="/programs" style={{ textDecoration: 'none' }}><Button color="inherit">Programms</Button></Link>
+     
       <br />
       <br />
 
@@ -75,16 +74,12 @@ function Dashboard(props) {
       {
         admin && <Box>
 
-          {/* <Link to="/addItems" style={{ textDecoration: 'none' }}><Button color="inherit">Add Items</Button></Link>
-          <br />
-
-
-
-          <Link to="/allProducts" style={{ textDecoration: 'none' }}><Button color="inherit">manage Products</Button></Link>
-          <br /> */}
+          
 
 
           <Link to="/makeAdmin" style={{ textDecoration: 'none' }}><Button color="inherit">Make Admin</Button></Link>
+
+          
 
         </Box>
       }
@@ -114,7 +109,7 @@ function Dashboard(props) {
       <CssBaseline />
       <AppBar
         position="fixed"
-        sx={{
+        sx={{ bgcolor: "success.main",
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
         }}
@@ -147,7 +142,7 @@ function Dashboard(props) {
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
-          sx={{
+          sx={{ 
             display: { xs: 'block', sm: 'none' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
@@ -174,15 +169,8 @@ function Dashboard(props) {
           {/* <Route exact path={path}>
             <DashboardHome></DashboardHome>
           </Route> */}
-          <AdminRoute path={`${path}/makeAdmin`}>
-            <MakeAdmin></MakeAdmin>
-          </AdminRoute>
-          {/* <AdminRoute path={`${path}/myOrders`}>
-            <MyOrders></MyOrders>
-          </AdminRoute>
-          <AdminRoute path={`${path}/manageOrder`}>
-            <ManageOrder></ManageOrder>
-          </AdminRoute> */}
+          
+          
         </Switch>
 
         <Typography paragraph>

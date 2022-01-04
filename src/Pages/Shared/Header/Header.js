@@ -23,6 +23,12 @@ const Header = () => {
             </NavLink>
 
           </Box>
+          <Box>
+            <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/programs">
+              <Button color="inherit">Our Programms</Button>
+            </NavLink>
+
+          </Box>
 
           <Box>
             <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/services">

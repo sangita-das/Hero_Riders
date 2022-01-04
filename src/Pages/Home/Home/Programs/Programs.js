@@ -1,65 +1,65 @@
+
 import { Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useEffect, useState } from 'react';
 import { Container } from '@mui/material';
-import SingleService from '../SingleService/SingleService';
 import Flip from 'react-reveal/Flip';
 import Fade from 'react-reveal/Fade';
+import Program from '../../Program/Program';
 
-const Services = () => {
-  const [services, setServices] = useState([]);
+const Programs = () => {
+
+  const [programs, setPrograms] = useState([]);
   useEffect(() => {
-    fetch('https://pacific-headland-86912.herokuapp.com/services')
+    fetch('https://pacific-headland-86912.herokuapp.com/programs')
       .then(res => res.json())
-      .then(data => setServices(data));
+      .then(data => setPrograms(data));
   }, []);
 
+
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <div>
+      <Box sx={{ flexGrow: 1 }}>
     <Container>
     <Flip right>
     <Typography sx={{ fontWeight: 600, m: 4, color: 'success.main' }} variant="h4" component="div">
-        OUR Services
+        OUR Individual Programs
       </Typography>
         </Flip>
-<hr />
-        <Fade bottom>
-        <Typography variant="h6" component="div">
-      At Driver Training Services - We Don’t Just Teach The Test
-      </Typography>
-        </Fade>
+
+       
 
         <Fade bottom>
         <Typography>
       We have programs to precisely meet your needs, incorporating online theory, classroom training, behind-the-wheel instruction and simulator experience
       </Typography>
         </Fade>
-
-      
-      
-      
-
+        <hr />
+        <hr />
+        <br />
 
       <br />
       <br />
 
       <Fade bottom>
-      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12, lg:4 }}>
 
       
 {
-  services.map(service => <SingleService
-    id={service.id}
-    services={service}
-  ></SingleService>)
+  programs.map(program => <Program
+    id={program.id}
+    program={program}
+  ></Program>)
 }
+
 </Grid>
         </Fade>
 
       
     </Container>
   </Box>
-);
+    </div>
+  );
 };
-  
-export default Services;
+
+export default Programs;

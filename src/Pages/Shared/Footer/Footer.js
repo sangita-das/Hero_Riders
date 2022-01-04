@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const footer = {
   backgroundColor: '#3e2723',
   backgroundBlendMode: 'darken, luminosity',
-  marginTop: 175,
+ 
 
 }
 

@@ -16,7 +16,10 @@ import ManageService from './Pages/Dashboard/ManageService/ManageService';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import About from './Pages/Home/Home/About/About';
 import BookingModal from './Pages/Dashboard/BookingModal/BookingModal';
-import { Dashboard } from '@mui/icons-material';
+import Programs from './Pages/Home/Home/Programs/Programs';
+import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
+import Pay from './Pages/Dashboard/Pay/Pay';
+import MakeAdmin from './Pages/Dashboard/MakeAdmin/MakeAdmin';
 
 function App() {
   return (
@@ -51,6 +54,9 @@ function App() {
           <Route exact path="/services">
             <Services/>
           </Route>
+          <Route exact path="/programs">
+            <Programs/>
+          </Route>
           
           {/* <Route exact path="/reviews">
             <Reviews />
@@ -77,6 +83,12 @@ function App() {
           <Route path="/register">
             <Register />
           </Route>
+          <PrivateRoute path="/pay">
+            <Pay />
+          </PrivateRoute>
+          <PrivateRoute path="/makeAdmin">
+            <MakeAdmin />
+          </PrivateRoute>
           <Route exact path="/">
             <Home />
           </Route>
