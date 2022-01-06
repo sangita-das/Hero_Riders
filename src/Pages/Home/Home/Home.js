@@ -15,7 +15,7 @@ const Home = () => {
 
   const [programs, setPrograms] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:5000/programs')
+    fetch('https://pacific-headland-86912.herokuapp.com/programs')
       .then(res => res.json())
       .then(data => setPrograms(data.slice(0, 3)));
   }, []);
