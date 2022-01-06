@@ -55,7 +55,7 @@ const Home = () => {
 
         <Fade bottom>
         <Typography>
-      We have programs to precisely meet your needs, incorporating online theory, classroom training, behind-the-wheel instruction and simulator experience......
+      We have programs to precisely meet your needs, incorporating online theory, classroom training, behind-the-wheel instruction and simulator experience.
       </Typography>
         </Fade>
         <hr />
